@@ -16,5 +16,16 @@ namespace wcfCashier
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_jmlPEsan_TextChanged(object sender, EventArgs e)
+        {
+            int x = Convert.ToInt32(label6.Text);
+
+        }
     }
 }
