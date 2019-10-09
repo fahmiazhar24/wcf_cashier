@@ -40,9 +40,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
-            this.wCF_CashierDataSet = new wcfCashier.WCF_CashierDataSet();
+            this.wCF_CashierDataSet = new wcfCashier.WCF_CashierDataSet1();
             this.menuBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.menuTableAdapter = new wcfCashier.WCF_CashierDataSetTableAdapters.menuTableAdapter();
+            this.menuTableAdapter = new wcfCashier.WCF_CashierDataSet1TableAdapters.menuTableAdapter();
             this.namaMenuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hargaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -183,17 +183,13 @@
             // 
             this.namaMenuDataGridViewTextBoxColumn.DataPropertyName = "Nama_Menu";
             this.namaMenuDataGridViewTextBoxColumn.HeaderText = "Nama_Menu";
-            this.namaMenuDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.namaMenuDataGridViewTextBoxColumn.Name = "namaMenuDataGridViewTextBoxColumn";
-            this.namaMenuDataGridViewTextBoxColumn.Width = 125;
             // 
             // hargaDataGridViewTextBoxColumn
             // 
             this.hargaDataGridViewTextBoxColumn.DataPropertyName = "Harga";
             this.hargaDataGridViewTextBoxColumn.HeaderText = "Harga";
-            this.hargaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.hargaDataGridViewTextBoxColumn.Name = "hargaDataGridViewTextBoxColumn";
-            this.hargaDataGridViewTextBoxColumn.Width = 125;
             // 
             // Form1
             // 
@@ -225,9 +221,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.Button button1;
-        private WCF_CashierDataSet wCF_CashierDataSet;
+        private WCF_CashierDataSet1 wCF_CashierDataSet;
         private System.Windows.Forms.BindingSource menuBindingSource;
-        private WCF_CashierDataSetTableAdapters.menuTableAdapter menuTableAdapter;
+        private WCF_CashierDataSet1TableAdapters.menuTableAdapter menuTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn namaMenuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hargaDataGridViewTextBoxColumn;
     }

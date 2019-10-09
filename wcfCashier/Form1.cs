@@ -17,6 +17,8 @@ namespace wcfCashier
         {
             InitializeComponent();
             label_ttlhrg.Text = "0";
+            label6.Text = "menu";
+            dateTimePicker1.Enabled = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -45,8 +47,10 @@ namespace wcfCashier
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'wCF_CashierDataSet.menu' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'wCF_CashierDataSet1.menu' table. You can move, or remove it, as needed.
             this.menuTableAdapter.Fill(this.wCF_CashierDataSet.menu);
+            // TODO: This line of code loads data into the 'wCF_CashierDataSet.menu' table. You can move, or remove it, as needed.
+            //this.menuTableAdapter.Fill(this.wCF_CashierDataSet.menu);
 
         }
 
@@ -59,11 +63,6 @@ namespace wcfCashier
             harga = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[1].Value);
 
             label6.Text = menu;
-        }
-
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
