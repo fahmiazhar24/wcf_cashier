@@ -27,5 +27,10 @@ namespace wcfCashier
             int x = Convert.ToInt32(label6.Text);
 
         }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
