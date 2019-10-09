@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -37,10 +38,17 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_Save = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btn_Save = new System.Windows.Forms.Button();
+            this.wCF_CashierDataSet = new wcfCashier.WCF_CashierDataSet();
+            this.menuBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.menuTableAdapter = new wcfCashier.WCF_CashierDataSetTableAdapters.menuTableAdapter();
+            this.namaMenuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hargaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.wCF_CashierDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -96,12 +104,19 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.namaMenuDataGridViewTextBoxColumn,
+            this.hargaDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.menuBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(454, 48);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(221, 205);
             this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // label6
             // 
@@ -131,15 +146,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CASHIER";
             // 
-            // btn_Save
-            // 
-            this.btn_Save.Location = new System.Drawing.Point(20, 227);
-            this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(94, 26);
-            this.btn_Save.TabIndex = 11;
-            this.btn_Save.Text = "PRINT";
-            this.btn_Save.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(137, 227);
@@ -150,6 +156,45 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btn_Save
+            // 
+            this.btn_Save.Location = new System.Drawing.Point(20, 227);
+            this.btn_Save.Name = "btn_Save";
+            this.btn_Save.Size = new System.Drawing.Size(94, 26);
+            this.btn_Save.TabIndex = 11;
+            this.btn_Save.Text = "PRINT";
+            this.btn_Save.UseVisualStyleBackColor = true;
+            // 
+            // wCF_CashierDataSet
+            // 
+            this.wCF_CashierDataSet.DataSetName = "WCF_CashierDataSet";
+            this.wCF_CashierDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // menuBindingSource
+            // 
+            this.menuBindingSource.DataMember = "menu";
+            this.menuBindingSource.DataSource = this.wCF_CashierDataSet;
+            // 
+            // menuTableAdapter
+            // 
+            this.menuTableAdapter.ClearBeforeFill = true;
+            // 
+            // namaMenuDataGridViewTextBoxColumn
+            // 
+            this.namaMenuDataGridViewTextBoxColumn.DataPropertyName = "Nama_Menu";
+            this.namaMenuDataGridViewTextBoxColumn.HeaderText = "Nama_Menu";
+            this.namaMenuDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.namaMenuDataGridViewTextBoxColumn.Name = "namaMenuDataGridViewTextBoxColumn";
+            this.namaMenuDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // hargaDataGridViewTextBoxColumn
+            // 
+            this.hargaDataGridViewTextBoxColumn.DataPropertyName = "Harga";
+            this.hargaDataGridViewTextBoxColumn.HeaderText = "Harga";
+            this.hargaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.hargaDataGridViewTextBoxColumn.Name = "hargaDataGridViewTextBoxColumn";
+            this.hargaDataGridViewTextBoxColumn.Width = 125;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -158,9 +203,12 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.wCF_CashierDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -177,6 +225,11 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.Button button1;
+        private WCF_CashierDataSet wCF_CashierDataSet;
+        private System.Windows.Forms.BindingSource menuBindingSource;
+        private WCF_CashierDataSetTableAdapters.menuTableAdapter menuTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn namaMenuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hargaDataGridViewTextBoxColumn;
     }
 }
 
