@@ -33,10 +33,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button_cari = new System.Windows.Forms.Button();
-            this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
-            this.tgl_PemesananToolStripLabel = new System.Windows.Forms.ToolStripLabel();
-            this.tgl_PemesananToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
-            this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.iDBillDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tglPemesananDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDMenuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,7 +44,6 @@
             this.btn_back = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.fillByToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.billpesanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wCF_CashierDataSet1)).BeginInit();
             this.SuspendLayout();
@@ -101,39 +96,6 @@
             this.button_cari.Text = "Cari";
             this.button_cari.UseVisualStyleBackColor = true;
             this.button_cari.Click += new System.EventHandler(this.button_cari_Click);
-            // 
-            // fillByToolStrip
-            // 
-            this.fillByToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tgl_PemesananToolStripLabel,
-            this.tgl_PemesananToolStripTextBox,
-            this.fillByToolStripButton});
-            this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.fillByToolStrip.Name = "fillByToolStrip";
-            this.fillByToolStrip.Size = new System.Drawing.Size(800, 27);
-            this.fillByToolStrip.TabIndex = 3;
-            this.fillByToolStrip.Text = "fillByToolStrip";
-            // 
-            // tgl_PemesananToolStripLabel
-            // 
-            this.tgl_PemesananToolStripLabel.Name = "tgl_PemesananToolStripLabel";
-            this.tgl_PemesananToolStripLabel.Size = new System.Drawing.Size(112, 24);
-            this.tgl_PemesananToolStripLabel.Text = "Tgl_Pemesanan:";
-            // 
-            // tgl_PemesananToolStripTextBox
-            // 
-            this.tgl_PemesananToolStripTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tgl_PemesananToolStripTextBox.Name = "tgl_PemesananToolStripTextBox";
-            this.tgl_PemesananToolStripTextBox.Size = new System.Drawing.Size(100, 27);
-            // 
-            // fillByToolStripButton
-            // 
-            this.fillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.fillByToolStripButton.Name = "fillByToolStripButton";
-            this.fillByToolStripButton.Size = new System.Drawing.Size(48, 24);
-            this.fillByToolStripButton.Text = "FillBy";
-            this.fillByToolStripButton.Click += new System.EventHandler(this.fillByToolStripButton_Click);
             // 
             // iDBillDataGridViewTextBoxColumn
             // 
@@ -206,19 +168,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_back);
-            this.Controls.Add(this.fillByToolStrip);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.fillByToolStrip.ResumeLayout(false);
-            this.fillByToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.billpesanBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wCF_CashierDataSet1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -235,10 +193,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn jmlPesanaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalhargaDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button_cari;
-        private System.Windows.Forms.ToolStrip fillByToolStrip;
-        private System.Windows.Forms.ToolStripLabel tgl_PemesananToolStripLabel;
-        private System.Windows.Forms.ToolStripTextBox tgl_PemesananToolStripTextBox;
-        private System.Windows.Forms.ToolStripButton fillByToolStripButton;
         private System.Windows.Forms.Button btn_back;
     }
 }
