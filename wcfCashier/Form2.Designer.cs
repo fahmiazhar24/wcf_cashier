@@ -30,22 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button_cari = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button_cari = new System.Windows.Forms.Button();
+            this.btn_back = new System.Windows.Forms.Button();
             this.iDBillDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tglPemesananDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDMenuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jmlPesanaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalhargaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.billpesanBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.wCF_CashierDataSet1 = new wcfCashier.WCF_CashierDataSet1();
-            this.billpesanTableAdapter = new wcfCashier.WCF_CashierDataSet1TableAdapters.BillpesanTableAdapter();
-            this.btn_back = new System.Windows.Forms.Button();
+            this.wCF_CashierDataSet4 = new wcfCashier.WCF_CashierDataSet4();
+            this.billpesanTableAdapter = new wcfCashier.WCF_CashierDataSet4TableAdapters.BillpesanTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.billpesanBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wCF_CashierDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wCF_CashierDataSet4)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -60,6 +60,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CARI BILL";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // button_cari
+            // 
+            this.button_cari.Location = new System.Drawing.Point(563, 33);
+            this.button_cari.Name = "button_cari";
+            this.button_cari.Size = new System.Drawing.Size(75, 23);
+            this.button_cari.TabIndex = 3;
+            this.button_cari.Text = "Cari";
+            this.button_cari.UseVisualStyleBackColor = true;
+            this.button_cari.Click += new System.EventHandler(this.button_cari_Click);
             // 
             // dateTimePicker1
             // 
@@ -87,15 +97,15 @@
             this.dataGridView1.Size = new System.Drawing.Size(620, 230);
             this.dataGridView1.TabIndex = 2;
             // 
-            // button_cari
+            // btn_back
             // 
-            this.button_cari.Location = new System.Drawing.Point(563, 33);
-            this.button_cari.Name = "button_cari";
-            this.button_cari.Size = new System.Drawing.Size(75, 23);
-            this.button_cari.TabIndex = 3;
-            this.button_cari.Text = "Cari";
-            this.button_cari.UseVisualStyleBackColor = true;
-            this.button_cari.Click += new System.EventHandler(this.button_cari_Click);
+            this.btn_back.Location = new System.Drawing.Point(365, 396);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(75, 23);
+            this.btn_back.TabIndex = 4;
+            this.btn_back.Text = "BACK";
+            this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // iDBillDataGridViewTextBoxColumn
             // 
@@ -141,26 +151,16 @@
             // billpesanBindingSource
             // 
             this.billpesanBindingSource.DataMember = "Billpesan";
-            this.billpesanBindingSource.DataSource = this.wCF_CashierDataSet1;
+            this.billpesanBindingSource.DataSource = this.wCF_CashierDataSet4;
             // 
-            // wCF_CashierDataSet1
+            // wCF_CashierDataSet4
             // 
-            this.wCF_CashierDataSet1.DataSetName = "WCF_CashierDataSet1";
-            this.wCF_CashierDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.wCF_CashierDataSet4.DataSetName = "WCF_CashierDataSet4";
+            this.wCF_CashierDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // billpesanTableAdapter
             // 
             this.billpesanTableAdapter.ClearBeforeFill = true;
-            // 
-            // btn_back
-            // 
-            this.btn_back.Location = new System.Drawing.Point(365, 396);
-            this.btn_back.Name = "btn_back";
-            this.btn_back.Size = new System.Drawing.Size(75, 23);
-            this.btn_back.TabIndex = 4;
-            this.btn_back.Text = "BACK";
-            this.btn_back.UseVisualStyleBackColor = true;
-            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // Form2
             // 
@@ -175,7 +175,7 @@
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.billpesanBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wCF_CashierDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wCF_CashierDataSet4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -184,15 +184,15 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private WCF_CashierDataSet1 wCF_CashierDataSet1;
+        private System.Windows.Forms.Button button_cari;
+        private System.Windows.Forms.Button btn_back;
+        private WCF_CashierDataSet4 wCF_CashierDataSet4;
         private System.Windows.Forms.BindingSource billpesanBindingSource;
-        private WCF_CashierDataSet1TableAdapters.BillpesanTableAdapter billpesanTableAdapter;
+        private WCF_CashierDataSet4TableAdapters.BillpesanTableAdapter billpesanTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDBillDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tglPemesananDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDMenuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn jmlPesanaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalhargaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button button_cari;
-        private System.Windows.Forms.Button btn_back;
     }
 }

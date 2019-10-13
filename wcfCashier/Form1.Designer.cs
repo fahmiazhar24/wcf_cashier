@@ -36,20 +36,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_jmlPEsan = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.iDMenuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namaMenuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hargaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.wCF_CashierDataSet = new wcfCashier.WCF_CashierDataSet();
             this.label6 = new System.Windows.Forms.Label();
             this.btn_Save = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.wCF_CashierDataSet = new wcfCashier.WCF_CashierDataSet();
-            this.menuBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuTableAdapter = new wcfCashier.WCF_CashierDataSetTableAdapters.menuTableAdapter();
-            this.iDMenuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namaMenuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hargaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button_exit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.wCF_CashierDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wCF_CashierDataSet)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -113,13 +114,48 @@
             this.namaMenuDataGridViewTextBoxColumn,
             this.hargaDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.menuBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(454, 48);
+            this.dataGridView1.Location = new System.Drawing.Point(486, 48);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(221, 205);
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // iDMenuDataGridViewTextBoxColumn
+            // 
+            this.iDMenuDataGridViewTextBoxColumn.DataPropertyName = "ID_Menu";
+            this.iDMenuDataGridViewTextBoxColumn.HeaderText = "ID_Menu";
+            this.iDMenuDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iDMenuDataGridViewTextBoxColumn.Name = "iDMenuDataGridViewTextBoxColumn";
+            this.iDMenuDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDMenuDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // namaMenuDataGridViewTextBoxColumn
+            // 
+            this.namaMenuDataGridViewTextBoxColumn.DataPropertyName = "Nama_Menu";
+            this.namaMenuDataGridViewTextBoxColumn.HeaderText = "Nama_Menu";
+            this.namaMenuDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.namaMenuDataGridViewTextBoxColumn.Name = "namaMenuDataGridViewTextBoxColumn";
+            this.namaMenuDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // hargaDataGridViewTextBoxColumn
+            // 
+            this.hargaDataGridViewTextBoxColumn.DataPropertyName = "Harga";
+            this.hargaDataGridViewTextBoxColumn.HeaderText = "Harga";
+            this.hargaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.hargaDataGridViewTextBoxColumn.Name = "hargaDataGridViewTextBoxColumn";
+            this.hargaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // menuBindingSource
+            // 
+            this.menuBindingSource.DataMember = "menu";
+            this.menuBindingSource.DataSource = this.wCF_CashierDataSet;
+            // 
+            // wCF_CashierDataSet
+            // 
+            this.wCF_CashierDataSet.DataSetName = "WCF_CashierDataSet";
+            this.wCF_CashierDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label6
             // 
@@ -152,6 +188,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button_exit);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btn_Save);
             this.groupBox1.Controls.Add(this.label6);
@@ -169,44 +206,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CASHIER";
             // 
-            // wCF_CashierDataSet
-            // 
-            this.wCF_CashierDataSet.DataSetName = "WCF_CashierDataSet";
-            this.wCF_CashierDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // menuBindingSource
-            // 
-            this.menuBindingSource.DataMember = "menu";
-            this.menuBindingSource.DataSource = this.wCF_CashierDataSet;
-            // 
             // menuTableAdapter
             // 
             this.menuTableAdapter.ClearBeforeFill = true;
             // 
-            // iDMenuDataGridViewTextBoxColumn
+            // button_exit
             // 
-            this.iDMenuDataGridViewTextBoxColumn.DataPropertyName = "ID_Menu";
-            this.iDMenuDataGridViewTextBoxColumn.HeaderText = "ID_Menu";
-            this.iDMenuDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iDMenuDataGridViewTextBoxColumn.Name = "iDMenuDataGridViewTextBoxColumn";
-            this.iDMenuDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDMenuDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // namaMenuDataGridViewTextBoxColumn
-            // 
-            this.namaMenuDataGridViewTextBoxColumn.DataPropertyName = "Nama_Menu";
-            this.namaMenuDataGridViewTextBoxColumn.HeaderText = "Nama_Menu";
-            this.namaMenuDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.namaMenuDataGridViewTextBoxColumn.Name = "namaMenuDataGridViewTextBoxColumn";
-            this.namaMenuDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // hargaDataGridViewTextBoxColumn
-            // 
-            this.hargaDataGridViewTextBoxColumn.DataPropertyName = "Harga";
-            this.hargaDataGridViewTextBoxColumn.HeaderText = "Harga";
-            this.hargaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.hargaDataGridViewTextBoxColumn.Name = "hargaDataGridViewTextBoxColumn";
-            this.hargaDataGridViewTextBoxColumn.Width = 125;
+            this.button_exit.BackColor = System.Drawing.Color.Red;
+            this.button_exit.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_exit.ForeColor = System.Drawing.Color.White;
+            this.button_exit.Location = new System.Drawing.Point(237, 227);
+            this.button_exit.Name = "button_exit";
+            this.button_exit.Size = new System.Drawing.Size(81, 29);
+            this.button_exit.TabIndex = 17;
+            this.button_exit.Text = "EXIT";
+            this.button_exit.UseVisualStyleBackColor = false;
+            this.button_exit.Click += new System.EventHandler(this.button_exit_Click);
             // 
             // Form1
             // 
@@ -218,10 +233,10 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wCF_CashierDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.wCF_CashierDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -245,6 +260,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn iDMenuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn namaMenuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hargaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button_exit;
     }
 }
 

@@ -29,8 +29,14 @@ namespace wcfCashier
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'wCF_CashierDataSet4.Billpesan' table. You can move, or remove it, as needed.
+            this.billpesanTableAdapter.Fill(this.wCF_CashierDataSet4.Billpesan);
+            // TODO: This line of code loads data into the 'wCF_CashierDataSet4.menu' table. You can move, or remove it, as needed.
+            //this.menuTableAdapter.Fill(this.wCF_CashierDataSet4.menu);
+            // TODO: This line of code loads data into the 'wCF_CashierDataSet4.Billpesan' table. You can move, or remove it, as needed.
+            //this.billpesanTableAdapter.Fill(this.wCF_CashierDataSet4.Billpesan);
             // TODO: This line of code loads data into the 'wCF_CashierDataSet1.Billpesan' table. You can move, or remove it, as needed.
-            this.billpesanTableAdapter.Fill(this.wCF_CashierDataSet1.Billpesan);
+            //this.billpesanTableAdapter.Fill(this.wCF_CashierDataSet1.Billpesan);
 
         }
 
@@ -38,7 +44,7 @@ namespace wcfCashier
         {
             try
             {
-                this.billpesanTableAdapter.FillBy(this.wCF_CashierDataSet1.Billpesan, new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(dateTimePicker1.Text, typeof(System.DateTime))))));
+                this.billpesanTableAdapter.FillBy(this.wCF_CashierDataSet4.Billpesan, new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(dateTimePicker1.Text, typeof(System.DateTime))))));
                 this.dataGridView1.Refresh();
             }
             catch (System.Exception ex)
@@ -55,21 +61,9 @@ namespace wcfCashier
             //    {
             //        System.Windows.Forms.MessageBox.Show(ex.Message);
             //    }
-            
-        }
-
-        private void fillByToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.billpesanTableAdapter.FillBy(this.wCF_CashierDataSet1.Billpesan, new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(tgl_PemesananToolStripTextBox.Text, typeof(System.DateTime))))));
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
 
         }
+
 
         private void btn_back_Click(object sender, EventArgs e)
         {
